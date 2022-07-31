@@ -23,7 +23,8 @@
 
   </section>
   <button id="previous">Previous </button>
-  <span id="pageeee"></span>
+  <select class="sele" id="choose_page" onchange="populate(novel,this.options[this.selectedIndex].value)"><!---->
+  </select>
   <button id="next">Next</button>
 
 
@@ -55,6 +56,21 @@
       }
       document.getElementById("loading").style.display = "none";
       window.scrollTo(0, 0);
+      
+    }
+
+    async function show_tables(a) {
+      let b = `https://gororo533.github.io/all_novel/${a}_title.json`;
+      const requestURL = b;
+      const request = new Request(requestURL);
+      const response = await fetch(request);
+      const superHeroes = await response.json();
+      const choose_page = document.getElementById("choose_page");
+      for(let i = 0;i<superHeroes.size();i++){
+        choose_page.innerHTML+=`
+          <option value="${i+1}">${superHeroes[i]}</option>
+        `
+      }
     }
 
     let next = document.getElementById("next");
@@ -78,6 +94,7 @@
     document.getElementById("choose_book").addEventListener("click",function(){
       let nov = document.getElementById("choose_book_sele").value;
       populate(nov , 1)
+      show_tables(nov)
     })
   </script>
 
