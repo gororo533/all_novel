@@ -2,9 +2,9 @@ body{
   background-color: #fcfcfc;
 }
 .sec{
-  max-width: 90%;
-  margin: 7%;
-  margin-left: 13%;
+  max-width: 100%;
+  margin: 5%;
+  /*margin-left: 13%;*/
   font-family: "DFKai-SB";
   font-size: 14px;
   line-height: 19px;
@@ -147,12 +147,6 @@ p{
     display: table-cell;
     vertical-align: middle;
     text-align: center;
-    font-size: 50px;
+    font-size: 100px;
     }
-  .progress_ghaph{
-    
-    
-    text-align: left;
-    padding-left: 5%;
-    
-  }
+  
