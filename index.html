@@ -19,12 +19,9 @@
     <!--<div class="progress_ghaph" id="progress_ghaph"></div>-->
   </div>
   
-  <section class="sec" id="sec">
-
-  </section>
+  <section class="sec" id="sec"></section>
   <button id="previous">Previous </button>
-  <select class="sele" id="choose_page" onchange="populate(novel,this.options[this.selectedIndex].value)"><!---->
-  </select>
+  <select id="choose_page" onchange="populate(novel,this.options[this.selectedIndex].value)"></select>
   <button id="next">Next</button>
 
 
@@ -66,7 +63,7 @@
       const response = await fetch(request);
       const superHeroes = await response.json();
       const choose_page = document.getElementById("choose_page");
-      for(let i = 0;i<superHeroes.size();i++){
+      for(let i = 0;i<superHeroes.length;i++){
         choose_page.innerHTML+=`
           <option value="${i+1}">${superHeroes[i]}</option>
         `

@@ -22,7 +22,7 @@ body{
 }
 
 #previous{
-  margin-left: 15%;
+  margin-left: 10%;
 }
 #next{
   margin-left: 5%;
@@ -109,6 +109,11 @@ li{
   height:40px;
   font-size:12px;
 }
+#choose_page{
+  height:40px;
+  font-size:12px;
+  margin-left: 5%;
+}
 #input1{
   max-width: 75%; 
   height:40px;
@@ -148,10 +153,9 @@ p{
     text-align: center;
     font-size: 50px;
     }
-  .progress_ghaph{
-    
-    
+  .progress_ghaph{    
     text-align: left;
     padding-left: 5%;
-    
   }
+
+  
